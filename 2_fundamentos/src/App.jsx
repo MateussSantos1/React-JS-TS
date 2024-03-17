@@ -10,10 +10,12 @@ import Descricao from './components/Descricao';
 import Exemplo2 from './components/Exemplo2';
 import Formulario from './components/Formulario';
 import InfoUserFormulario from './components/InfoUserFormulario';
+import ListaNumber from './components/ListaNumber';
 import LoginButao from './components/LoginButao';
 import MeuExemplo from './components/MeuExemplo';
 import Pai from './components/Pai';
 import PaiFunction from './components/PaiFunction';
+import Perigo from './components/Perigo';
 import RenderCondicional from './components/RenderCondicional';
 import Variaveis from './components/Variaveis';
 function App() {
@@ -61,7 +63,18 @@ function App() {
       {/* OUUUUUUU */}
 
       <LoginButao logado={true}/>
+
+      {/* RENDER NULOOOO */}
+      <Perigo perigo={true}/>
+      {/* se fosse 'false' ou se tivesse algum texto, nao apareceria!! */}
+    
+    
+      {/* LISTAS e CHAVES */}
+      <ListaNumber numeros={[1, 2, 3, 4, 5]}/>
+    
     </>
+
+    
   )
 };
 
