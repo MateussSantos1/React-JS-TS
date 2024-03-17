@@ -4,6 +4,8 @@ import './App.css';
 
 import BemVindo from './components/BemVindo';
 import Botao from './components/Botao';
+import BotaoAzul from './components/BotaoAzul';
+import BotaoEstilizado from './components/BotaoEstilizado';
 import Cachorro from './components/Cachorro';
 import Contador from './components/Contador';
 import Descricao from './components/Descricao';
@@ -17,6 +19,7 @@ import Pai from './components/Pai';
 import PaiFunction from './components/PaiFunction';
 import Perigo from './components/Perigo';
 import RenderCondicional from './components/RenderCondicional';
+import Exercicios from './components/Exercicios';
 import Variaveis from './components/Variaveis';
 function App() {
 
@@ -53,7 +56,7 @@ function App() {
 
     {/* Renderização condicional */}
 
-    <RenderCondicional/>
+    <RenderCondicional user={'Matheus'}/>
     {/* <RenderCondicional user={'Matheus'}/> */}
 
 
@@ -71,9 +74,32 @@ function App() {
     
       {/* LISTAS e CHAVES */}
       <ListaNumber numeros={[1, 2, 3, 4, 5]}/>
+
+
+      {/* Estilos para atributos */}
+
+      <BotaoEstilizado/>
     
+
+      {/* Estilos GLOBAIS  usando o 'index.css' :*/}
+
+      <BotaoAzul/>
+
+
+
+
+
+
+      {/* EXERCICIOOOOOOOOOOOOOOS */}
+
+      {/* EXERCICIO - 1: OLA, nome do sujeito com a props name */}
+      {/* EXERCICIO - 2: BOTÃO QUE FACA A CONTAGEM DE VEZES QUE FOI CLICADO !!! */}
+    {/* EXERCICIO - 3: LISTA DE TAREFAS COM O _ID_ E _DESCRICAO DA TAREFA_ */}
+      <Exercicios/>
+
     </>
 
+      
     
   )
 };
