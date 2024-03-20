@@ -8,7 +8,7 @@ const ComponenteFilho = () => {
 
   return (
     <div>
-      <p>{mensagem}</p>
+      <p>Oha o conteudo da nova mensagem: {mensagem}</p>
       <button onClick={() => setMensagem("Nova mensagem")}>
         Atualizar Mensagem
       </button>
