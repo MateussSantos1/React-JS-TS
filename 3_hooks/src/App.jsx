@@ -11,6 +11,8 @@ import Contador from './components/Contador'
 import DisplayWindowSize from './components/DisplayWindowSize'
 import Container from './components/Container'
 import PerfilDeUsuario from './components/PerfilDeUsuario'
+import CalculoPesado from './components/CalculoPesado'
+import ContadorCallback from './components/ContadorCallBack'
 function App() {
 
   return (
@@ -55,6 +57,15 @@ function App() {
 <PerfilDeUsuario usuarioId={1}/>
 <PerfilDeUsuario usuarioId={2}/>
 
+
+{/* UseMemo e use CallBack */}
+{/* Irão otimizar o processamento */}
+
+{/* USE MEMO:  é mais usado para valores*/}
+<CalculoPesado numero={5}/>
+
+{/* USE CALL BACK  é mais usado para funções*/}
+<ContadorCallback/>
     </>
   )
 }
