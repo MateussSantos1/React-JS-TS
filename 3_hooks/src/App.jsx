@@ -13,6 +13,7 @@ import Container from './components/Container'
 import PerfilDeUsuario from './components/PerfilDeUsuario'
 import CalculoPesado from './components/CalculoPesado'
 import ContadorCallback from './components/ContadorCallBack'
+import Exercicios2 from './components/Exercicios2'
 function App() {
 
   return (
@@ -66,6 +67,9 @@ function App() {
 
 {/* USE CALL BACK  é mais usado para funções*/}
 <ContadorCallback/>
+
+{/* Exercicios - 2 */}
+<Exercicios2/>
     </>
   )
 }
