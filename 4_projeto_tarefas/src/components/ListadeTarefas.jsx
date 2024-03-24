@@ -1,8 +1,14 @@
-import React from 'react'
+import Tarefa from "./Tarefa"
 
 const ListadeTarefas = () => {
   return (
-    <div>ListadeTarefas</div>
+    <ul>
+        <Tarefa />
+        <Tarefa />
+        <Tarefa />
+        <Tarefa />
+        <Tarefa />
+    </ul>
   )
 }
 

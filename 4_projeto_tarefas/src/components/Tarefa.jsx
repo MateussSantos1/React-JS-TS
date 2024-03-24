@@ -2,7 +2,10 @@ import React from 'react'
 
 const Tarefa = () => {
   return (
-    <div>Tarefa</div>
+    <li>
+        <span>Texto da tareffa</span>
+        <button>Remover</button>
+    </li>
   )
 }
 

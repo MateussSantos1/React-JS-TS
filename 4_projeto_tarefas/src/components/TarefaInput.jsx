@@ -2,7 +2,10 @@ import React from 'react'
 
 const TarefaInput = () => {
   return (
-    <div>TarefaInput</div>
+    <form action="">
+        <input type="text" placeholder='Adicionar Nova Tarefa :' />
+        <button type='submit'>Adicionar</button>
+    </form>
   )
 }
 
