@@ -8,6 +8,7 @@ import ComponenteFilho from './components/ComponenteFIlho'
 import { MeuContextoProvider } from './contexts/MeuContext'
 import ValordoContexto from './components/ValordoContexto'
 import Contador from './components/Contador'
+import DisplayWindowSize from './components/DisplayWindowSize'
 function App() {
 
   return (
@@ -34,6 +35,9 @@ function App() {
 
 <Contador/>
 
+
+{/* Custom Hook ( Hook Customizado / Criado) */}
+<DisplayWindowSize/>
 
     </>
   )
