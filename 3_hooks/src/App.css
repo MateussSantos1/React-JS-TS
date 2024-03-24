@@ -4,7 +4,11 @@
   padding: 2rem;
   text-align: center;
 }
+button{
+  
+    color: #535bf2;
 
+}
 .logo {
   height: 6em;
   padding: 1.5em;
