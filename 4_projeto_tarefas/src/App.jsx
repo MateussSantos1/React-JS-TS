@@ -4,7 +4,28 @@ import TarefaInput from "./components/TarefaInput"
 import ListadeTarefas from "./components/ListadeTarefas"
 function App() {
 
-const [tarefas, setTarefas] = useState([]);
+
+
+// //////////////////vamo pegar da local storage 
+const [tarefas, setTarefas] = useState(
+  //converte de string para array / json
+  JSON.parse(localStorage.getItem('tarefas')) || []);
+
+
+
+useEffect(() => {
+
+//  QUANDO UMA TAREFA FOR COMPLETADA OU REMOVIDAD, VAMOS PERSISTIR ELA !!!! COM ESSE LOCAL STORAGE
+  //stringy transforma array/json em string
+    localStorage.setItem('tarefas', JSON.stringify(tarefas));
+
+}, [tarefas])
+
+
+
+
+
+
 
 const addTarefa = (tarefa) => {
 
@@ -17,7 +38,8 @@ const addTarefa = (tarefa) => {
     setTarefas([...tarefas,{id: Date.now(), text: tarefa, concluida:false}]);
 
 
-    //local storage
+    //local storage.setItem ---- SALVAR LOGO APÓS A ADICAO DA TAREFA !!!
+    localStorage.setItem('tarefas', JSON.stringify(tarefas));
 
 };
 
@@ -44,7 +66,7 @@ const addTarefa = (tarefa) => {
 
   return (
     <>
-      <h1>Lista de Tarefas</h1>
+      <h1>Lista de Tarefas : </h1>
 
     {/* PASSAR O ADDTAREFA PARA O TAREFA INPUTTTT */}
 

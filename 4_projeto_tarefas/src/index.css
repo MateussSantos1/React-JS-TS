@@ -50,7 +50,7 @@ button{
 
 
 button:hover{
-  background-color: rgb(170, 109, 39);
+  background-color: rgb(172, 57, 57);
 }
 
 button[type="submit"]{
