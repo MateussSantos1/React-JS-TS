@@ -35,6 +35,10 @@ li{
   border-radius: 7px;
 }
 
+li span {
+  cursor: pointer;
+}
+
 button{
   background-color: #5cb86c;
   color: white;

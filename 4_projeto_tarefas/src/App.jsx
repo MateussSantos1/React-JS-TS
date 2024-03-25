@@ -28,6 +28,19 @@ const addTarefa = (tarefa) => {
     };
 
 
+    const marcaConcluida = (tarefaId) =>{
+
+        {/* MAP exibe dados ou dados modificados !!!, no caso, dados modificados !!! */}
+
+
+      //  Se o id da task for igual ao taskId passado, mantem os dados das outras tasks (...tarefas, e vai inverter o valor do status ( no caso, referenciado pelo done , MAS SE O TASKID não bater com o id da tarefa, NÃO SE FAZ ALTERAÇÃO NENHUMA !!!! ) )   
+
+
+      setTarefas(tarefas.map((tarefa) => tarefa.id === tarefaId ? {...tarefa, done: !tarefa.done} : tarefa));
+
+    }
+
+
 
   return (
     <>
@@ -36,7 +49,7 @@ const addTarefa = (tarefa) => {
     {/* PASSAR O ADDTAREFA PARA O TAREFA INPUTTTT */}
 
       <TarefaInput onAddTarefa={addTarefa}/>
-      <ListadeTarefas tarefas={tarefas} onDeletarTarefa={deletarTarefa}/>
+      <ListadeTarefas tarefas={tarefas} onDeletarTarefa={deletarTarefa} onMarcaConcluida={marcaConcluida}/>
     </>
   )
 }

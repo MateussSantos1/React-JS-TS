@@ -1,7 +1,7 @@
-const Tarefa = ({tarefa, onDeletar}) => {
+const Tarefa = ({tarefa, onDeletar, onMarcar}) => {
   return (
     <li>
-        <span>{tarefa.text}</span>
+        <span onClick={onMarcar} style={{textDecoration: tarefa.done ? "line-through" : "none"}}  >{tarefa.text}</span>
         <button onClick={onDeletar}>Remover</button>
     </li>
   )
