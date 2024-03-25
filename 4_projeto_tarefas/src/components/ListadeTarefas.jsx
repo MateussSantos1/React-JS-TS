@@ -1,13 +1,13 @@
 import Tarefa from "./Tarefa"
 
-const ListadeTarefas = () => {
+const ListadeTarefas = ({tarefas, onDeletarTarefa}) => {
   return (
     <ul>
-        <Tarefa />
-        <Tarefa />
-        <Tarefa />
-        <Tarefa />
-        <Tarefa />
+        {tarefas.map((tarefa) => (
+
+            <Tarefa key={tarefa.id} tarefa={tarefa} onDeletar={() => onDeletarTarefa(tarefa.id) }/>
+
+        ))}
     </ul>
   )
 }

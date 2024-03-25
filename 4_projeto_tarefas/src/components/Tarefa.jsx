@@ -1,10 +1,8 @@
-import React from 'react'
-
-const Tarefa = () => {
+const Tarefa = ({tarefa, onDeletar}) => {
   return (
     <li>
-        <span>Texto da tareffa</span>
-        <button>Remover</button>
+        <span>{tarefa.text}</span>
+        <button onClick={onDeletar}>Remover</button>
     </li>
   )
 }
