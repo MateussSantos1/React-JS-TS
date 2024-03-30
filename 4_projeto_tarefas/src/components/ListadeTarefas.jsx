@@ -11,7 +11,7 @@ const ListadeTarefas = ({tarefas, onDeletarTarefa, onMarcaConcluida}) => {
             <img  width="600px "src="https://media.tenor.com/QKc5tEW9Q3oAAAAM/romnewz-messi.gif"/>
 
         </div> 
-    
+    z
     }
  
  
