@@ -4,7 +4,7 @@ const Contato = () => {
   return (
     <div>
         <ul style={{listStyle: 'none'}}>
-            <li>Telefone: (xx) xxxxx - xxxx</li>
+            <li>Telefone: (84) 99999 - 9999</li>
             <li>Email: fulanosouza@gmail.com</li>
         </ul>
 
