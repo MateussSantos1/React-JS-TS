@@ -71,3 +71,10 @@ button:focus-visible {
 .active-link{
   background-color: aqua;
 }
+.erroo{
+  color: red;
+}
+
+.volta{
+  background-color: #c6dbee;
+}
