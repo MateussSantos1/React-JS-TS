@@ -10,13 +10,22 @@ const PostManager = () => {
     const[error, setError] = useState("");
 
 
+     // Funcao pra ajudar a modificar o CRUD:
+    const handleSucess = (post, operation) => {
+        if (operation == "add"){
+            setPosts((currentPosts) => [post, ...currentPosts]);
+        }
+    }
+
+
+
     // UseEffects pra requisitar os Posts quando a página é carregadaa!!!
     useEffect(() => {
 
         const fetchPosts = async () => {
             try {
                 
-// Tentando um GET !!!
+// Tentando um GET (Receber / Puxar as informações da API) !!!
 
                 const response = await axios.get("https://jsonplaceholder.typicode.com/posts"
                 );
@@ -49,7 +58,7 @@ const PostManager = () => {
   return (
     <div>
     <h1>Gerenciar Posts: </h1>
-    <PostForm/>
+    <PostForm onSucess={handleSucess}/>
 
         <h2>Postagens</h2>
         {
