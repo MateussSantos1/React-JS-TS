@@ -2,6 +2,7 @@ import {BrowserRouter, Routes, Route, Link} from 'react-router-dom'
 import './App.css'
 import FetchPosts from './components/FetchPosts'
 import AxiosPosts from './components/AxiosPosts'
+import PostManager from './components/PostManager'
 function App() {
 
 
@@ -16,6 +17,13 @@ function App() {
       <Link to='/axios-posts'>Axios Posts</Link>
       </div>
 
+    {/* 2 - Continuando Requisições - POST e UPDATE/PUT   */}
+
+    <div>
+      <Link to="/posts">Gerenciar Posts</Link>
+    </div>
+
+
 
     <Routes>
 
@@ -23,6 +31,11 @@ function App() {
         
         <Route path='/fetch-posts' element={<FetchPosts/>}></Route>
         <Route path='/axios-posts' element={<AxiosPosts/>}></Route>
+    
+     {/* 2 - Continuando Requisições - POST e UPDATE/PUT   */}
+
+      <Route path='/posts' element={<PostManager/>}></Route>
+    
     </Routes>
 
     </BrowserRouter>
