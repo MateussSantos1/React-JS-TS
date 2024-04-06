@@ -11,9 +11,44 @@ const FetchPosts = () => {
 
     const [posts, setPosts] = useState([]);
     const[error, setError] = useState("");
+
+
+    // UseEffects pra requisitar os Posts quando a página é carregadaa!!! // use effect dispara a requisição
+    useEffect(() => {
+
+        const fetchPosts = async () => {
+            try {
+                
+// Tentando um GET !!!
+
+                const response = await fetch("https://jsonplaceholder.typicode.com/posts"
+                );
+
+                // console.log(response);
+
+                const data = await response.json();           
+                // JSON transforma os dados da const em um conjunto de objetos !!!
+
+                setPosts (data);
+
+
+            } catch (error) {
+                setError(error.message)
+            }
+        }
+
+
+
+        //Agora, executar a função: 
+        fetchPosts();
+
+
+    }, [])
+
+
   return (
     <div>
-        <h1>Posts (Fetch API)</h1>
+        <h3>Posts (Fetch API)</h3>
         {error ? (<p>Erro: {error}</p>) : (
             posts.map((post) =>(
 
