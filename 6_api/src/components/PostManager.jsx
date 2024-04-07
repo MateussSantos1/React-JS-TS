@@ -10,6 +10,13 @@ const PostManager = () => {
     const[error, setError] = useState("");
 
 
+    //EDITAR:
+    const [selectedPosts, setSelectedPosts] = useState(null);
+    const[isEditing, setIsEditing] = useState(false);
+
+
+
+
      // Funcao pra ajudar a modificar o CRUD:
     const handleSucess = (post, operation) => {
         if (operation == "add"){
@@ -55,11 +62,24 @@ const PostManager = () => {
 
     }, [])
 
+
+    const handleEdit = (post) =>{
+        setSelectedPosts(post)
+        setIsEditing(true)
+    }
+
+
+
+    const handleCancelEdit = (post) =>{
+        setSelectedPosts(null)
+        setIsEditing(false)
+    }
+
   return (
     <div>
     <h1>Gerenciar Posts: </h1>
     <PostForm onSucess={handleSucess}/>
-
+    {isEditing && <button onClick={handleCancelEdit}>Cancelar Edição</button>}
         <h2>Postagens</h2>
         {
             posts.map((post) =>(
@@ -67,7 +87,7 @@ const PostManager = () => {
                 <div key={post.id}>
                     <h2>{post.title}</h2>
                     <p>{post.body}</p>
-                    <button>Editar</button>
+                    <button onClick={() => handleEdit(post)} >Editar</button>
                 </div>
 
             ))
