@@ -3,6 +3,7 @@ import './App.css'
 import FetchPosts from './components/FetchPosts'
 import AxiosPosts from './components/AxiosPosts'
 import PostManager from './components/PostManager'
+import PostLoader from './components/PostLoader'
 function App() {
 
 
@@ -23,6 +24,11 @@ function App() {
       <Link to="/posts">Gerenciar Posts</Link>
     </div>
 
+    {/* 3 - Tratamento de Erros: */}
+
+    {/* leva para o post de id 1 !!! */}
+    <Link to="/post/1">Carregar Post 1</Link>
+    <Link to="/post/777">Carregar Post 777</Link>
 
 
     <Routes>
@@ -36,6 +42,11 @@ function App() {
 
       <Route path='/posts' element={<PostManager/>}></Route>
     
+
+    {/* 3 - Tratamento de Erros: */}
+
+    <Route path='/post/:postId' element={<PostLoader></PostLoader>}></Route>
+
     </Routes>
 
     </BrowserRouter>
