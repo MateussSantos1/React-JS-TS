@@ -22,6 +22,25 @@ const PostManager = () => {
         if (operation == "add"){
             setPosts((currentPosts) => [post, ...currentPosts]);
         }
+        
+        else if(operation == "update") {
+            //se o id bater, retorna o 'post' que é um novo valor para aquele posta, caso contrário ele retorna o 'p', que é o valor antigo !!!
+            setPosts((currentPosts) => currentPosts.map((p) => p.id === post.id ? post : p));
+
+
+            //finaliza o modo de edição:
+
+        }
+
+
+        else if(operation == "delete") {
+
+            setPosts((currentPosts) => currentPosts.filter((p) => p.id !== post.id));
+            // Isso mantém os ID diferentes, e apaga o que que pertence ao post selecionado !!!
+            setSelectedPosts(null);
+        }
+
+        setIsEditing(false);
     }
 
 
@@ -78,7 +97,7 @@ const PostManager = () => {
   return (
     <div>
     <h1>Gerenciar Posts: </h1>
-    <PostForm onSucess={handleSucess}/>
+    <PostForm post={isEditing ? selectedPosts : null } onSucess={handleSucess}/>
     {isEditing && <button onClick={handleCancelEdit}>Cancelar Edição</button>}
         <h2>Postagens</h2>
         {
