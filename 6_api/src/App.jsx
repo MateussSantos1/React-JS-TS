@@ -4,6 +4,7 @@ import FetchPosts from './components/FetchPosts'
 import AxiosPosts from './components/AxiosPosts'
 import PostManager from './components/PostManager'
 import PostLoader from './components/PostLoader'
+import PostViewer from './components/PostViewer'
 function App() {
 
 
@@ -27,9 +28,15 @@ function App() {
     {/* 3 - Tratamento de Erros: */}
 
     {/* leva para o post de id 1 !!! */}
+    <div>
     <Link to="/post/1">Carregar Post 1</Link>
     <Link to="/post/777">Carregar Post 777</Link>
+    </div>
 
+    {/* 4 - Custom Hook com API : */}
+    <div>
+      <Link to="/post/view/2">Carregar Post 2 ( Com : CustomHook)</Link>
+    </div>
 
     <Routes>
 
@@ -46,6 +53,11 @@ function App() {
     {/* 3 - Tratamento de Erros: */}
 
     <Route path='/post/:postId' element={<PostLoader></PostLoader>}></Route>
+
+
+        {/* 4 - Custom Hook com API : */}
+
+        <Route path='/post/view/:postId' element={<PostViewer></PostViewer>}></Route>
 
     </Routes>
 
