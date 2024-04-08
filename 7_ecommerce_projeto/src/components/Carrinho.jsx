@@ -1,8 +1,17 @@
 import React from 'react'
 
-const Carrinho = () => {
+const Carrinho = ({cartItems}) => {
   return (
-    <div>Carrinho</div>
+    <div>
+      <h1>Carrinho</h1>
+      {cartItems.length === 0 ? <p>Não há itens no carrinho !</p> : (
+      <ul>
+        {cartItems.map((item) => (
+          <li>{item.name}</li>
+        ))}
+      </ul>
+      )}
+    </div>
   )
 }
 

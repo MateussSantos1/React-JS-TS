@@ -1,6 +1,10 @@
-import React from 'react'
+import React, { useState } from 'react'
 
-const Produto = ({product}) => {
+// recebe o produto e a funcao addtocart
+const Produto = ({product, onAddToCart}) => {
+
+  const [quantity, setQuantity] = useState(1)
+
   return (
     <div className='product'>
         <img src={product.image} alt={product.name} />
@@ -11,7 +15,7 @@ const Produto = ({product}) => {
                 <option value="">1</option>
             </select>
 
-            <button>Adicionar ao Carrinho</button>
+            <button onClick={() => onAddToCart(product, quantity)}>Adicionar ao Carrinho</button>
         </div>
     </div>
   )

@@ -2,7 +2,7 @@ import {useState, useEffect} from 'react'
 import productsData from "../data/products_mock.json";
 import Produto from './Produto';
 
-const Catalogo = () => {
+const Catalogo = ({onAddToCart}) => {
   return (
     <div>
       <h1>Catálogo de Produtos</h1>
@@ -10,7 +10,10 @@ const Catalogo = () => {
 
 {/* Exibir os produtos do banco:  */}
     {productsData.map((product) => (
-      <Produto key={product.id} product = {product}/>
+      <Produto key={product.id}
+       product = {product}
+       onAddToCart = {onAddToCart}
+       />
     ))}
 
       </div>
