@@ -8,11 +8,17 @@ const Produto = ({product, onAddToCart}) => {
   return (
     <div className='product'>
         <img src={product.image} alt={product.name} />
-        <h3>{product.title}</h3>
+        <h3>{product.name}</h3>
         <p>${product.price}</p>
         <div className="botao-carrinho">
-            <select name="" id="">
-                <option value="">1</option>
+
+          {/* Alterar o setQUantity para o novo valor recebido: */}
+            <select onChange={(e) => setQuantity(e.target.value)}>
+
+              {/* adicionando até 10 options !!! */}
+                {[...Array(10).keys()].map((x) => (
+                  <option key={x+1} value={x+1}>{x+1}</option>
+                ))}
             </select>
 
             <button onClick={() => onAddToCart(product, quantity)}>Adicionar ao Carrinho</button>

@@ -51,6 +51,20 @@ function App() {
 
   }
 
+
+    const handleUpdateCart = (product, quantity) =>{
+      toast.info(`Quantidade(s) do item "${product.name}" atualizada !!`)
+      setCartItems((prevItems) => {
+        //
+        //modificar a quantity para atualizar (+) a quantity enviada
+        //se nao for o id, retorna o item original
+
+        return prevItems.map((item) => item.id === product.id ? {...item, quantity: +quantity} : item)
+      })
+    }
+
+
+
   return (
     <BrowserRouter>
         <nav>
@@ -60,12 +74,12 @@ function App() {
         <div className="container">
           <Routes>
             <Route path='/' element={<Catalogo onAddToCart={handleAddCart}/>}></Route>
-            <Route path='/cart' element={<Carrinho cartItems={cartItems}/>}></Route>
+            <Route path='/cart' element={<Carrinho cartItems={cartItems} onUpdateCart={handleUpdateCart}/>}></Route>
             <Route path='/obrigado' element={<Obrigado/>}></Route>
           </Routes>
         </div>
 
-        //barrinha
+        {/* barrinha */}
         <ToastContainer
         position='top-center'
         autoClose={3000}
