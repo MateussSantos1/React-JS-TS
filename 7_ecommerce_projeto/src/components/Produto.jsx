@@ -13,7 +13,7 @@ const Produto = ({product, onAddToCart}) => {
         <div className="botao-carrinho">
 
           {/* Alterar o setQUantity para o novo valor recebido: */}
-            <select onChange={(e) => setQuantity(e.target.value)}>
+            <select onChange={(e) => setQuantity(parseInt(e.target.value))}>
 
               {/* adicionando até 10 options !!! */}
                 {[...Array(10).keys()].map((x) => (

@@ -64,6 +64,18 @@ function App() {
     }
 
 
+    //remover do carrinho:
+
+    const handleRemoveFromCart = (product) => {
+
+      toast.error(`${product.name} foi removido !`)
+      setCartItems(prevItems =>
+       prevItems.filter((item) => item.id !== product.id)
+      )
+
+    }
+
+
 
   return (
     <BrowserRouter>
@@ -74,7 +86,7 @@ function App() {
         <div className="container">
           <Routes>
             <Route path='/' element={<Catalogo onAddToCart={handleAddCart}/>}></Route>
-            <Route path='/cart' element={<Carrinho cartItems={cartItems} onUpdateCart={handleUpdateCart}/>}></Route>
+            <Route path='/cart' element={<Carrinho cartItems={cartItems} onUpdateCart={handleUpdateCart} onRemoveFromCart={handleRemoveFromCart}/>}></Route>
             <Route path='/obrigado' element={<Obrigado/>}></Route>
           </Routes>
         </div>
