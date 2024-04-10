@@ -9,6 +9,8 @@ function App() {
   const [query, setQuery] = useState("")
   const[categoria, setCategoria] = useState("")
   const [fotos, setFotos] = useState([])
+  const [fotoAmpliada, setFotoAmpliada] = useState(null)
+
 
 const  fetchData = async({query}, {categoria}) =>{
 
@@ -38,8 +40,14 @@ useEffect (()=>{
   return (
     <div className='container'>
 <SearchBar/>
-<PhotoList fotos={fotos}/>
-<FotoAmpliada/>
+<PhotoList fotos={fotos} setFotoAmpliada={setFotoAmpliada}/>
+
+
+{/* se tiver foto ampliada, o componen 'fotoAmpliada' irá existir !! */}
+{fotoAmpliada && (
+  <FotoAmpliada foto={fotoAmpliada} setFotoAmpliada={setFotoAmpliada}/>
+)}
+
 
     </div>
   )
