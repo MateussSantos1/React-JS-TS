@@ -8,7 +8,7 @@ function App() {
 
   const [query, setQuery] = useState("")
   const[categoria, setCategoria] = useState("")
-
+  const [fotos, setFotos] = useState([])
 
 const  fetchData = async({query}, {categoria}) =>{
 
@@ -16,11 +16,14 @@ const  fetchData = async({query}, {categoria}) =>{
 
   const response = await axios.get('https://api.unsplash.com/photos/random', {
     params: {
-      client_id: apiKey
+      client_id: apiKey,
+      count: 10
     }
   }
 
 )
+//após receber o response, preenche o setFotos com o response.data
+setFotos ( response.data)
 
 console.log(response)
 
@@ -35,7 +38,7 @@ useEffect (()=>{
   return (
     <div className='container'>
 <SearchBar/>
-<PhotoList/>
+<PhotoList fotos={fotos}/>
 <FotoAmpliada/>
 
     </div>
