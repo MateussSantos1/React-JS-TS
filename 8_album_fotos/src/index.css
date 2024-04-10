@@ -25,6 +25,9 @@ body{
   color: aqua;
 }
 
+.search-bar input::placeholder{
+  color: rgb(190, 248, 114);
+}
 
 
 
