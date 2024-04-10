@@ -1,1 +1,7 @@
-Alguns exercicios e notas de aula sobre o uso do REACT com JS e TS
+## Algumas notas sobre o uso do REACT com JS e TS
+
+### Deploys
+
+* [Deploy - Mini Ecommerce](https://asa-kappa.vercel.app)
+
+
