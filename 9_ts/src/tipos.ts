@@ -66,8 +66,6 @@ let segundoNome = "Carvalho"
 let numeros : number[] = [1,2,3,4,5,6,7]
 //NOME      : TIPO    = [ITEM DA LISTA]
 
-
-
 // OBJETOS:
 
 let usuario : {name: string; age: number} = {
