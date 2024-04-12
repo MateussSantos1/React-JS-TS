@@ -92,3 +92,61 @@ let rgb: [number, number, number] = [255, 0, 0]
 
 
 console.log(`Gosto da cor RGB: [${rgb}]`)
+
+
+
+
+//Funções: 
+
+function Saudacoes (nome: string) {
+    return `Olá, ${nome} !!!`
+}
+
+console.log(Saudacoes("Mateus"))
+
+
+
+
+// Enum :
+
+enum Direction{
+    Up,
+    Down,
+    Left,
+    Right,
+    Lateral,
+}
+
+
+
+
+function getDirecaoMensagem(direction: Direction) : string{
+
+    switch (direction) {
+
+        case Direction.Up: 
+           return "Vai pra Cima !!!"
+
+           case Direction.Down: 
+           return "Vai pra Baixo !!!"
+
+           case Direction.Left: 
+           return "Vai pra Esquerda !!!"
+
+           case Direction.Right: 
+           return "Vai pra Direita !!!"
+
+        case Direction.Lateral: 
+        return "Fagner !!!!"
+
+           default:
+            return "Ficou parado !!!"
+
+    }
+
+
+}
+
+
+console.log(`O comando é: `  + getDirecaoMensagem(Direction.Up))
+console.log(`O comando é:` + getDirecaoMensagem(Direction.Down))

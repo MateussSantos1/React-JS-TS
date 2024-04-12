@@ -45,3 +45,35 @@ console.log(`Meu nome é ${usuario.name} e eu tenho ${usuario.age} anos !!!`);
 //RGB [n, n, n]
 let rgb = [255, 0, 0];
 console.log(`Gosto da cor RGB: [${rgb}]`);
+//Funções: 
+function Saudacoes(nome) {
+    return `Olá, ${nome} !!!`;
+}
+console.log(Saudacoes("Mateus"));
+// Enum :
+var Direction;
+(function (Direction) {
+    Direction[Direction["Up"] = 0] = "Up";
+    Direction[Direction["Down"] = 1] = "Down";
+    Direction[Direction["Left"] = 2] = "Left";
+    Direction[Direction["Right"] = 3] = "Right";
+    Direction[Direction["Lateral"] = 4] = "Lateral";
+})(Direction || (Direction = {}));
+function getDirecaoMensagem(direction) {
+    switch (direction) {
+        case Direction.Up:
+            return "Vai pra Cima !!!";
+        case Direction.Down:
+            return "Vai pra Baixo !!!";
+        case Direction.Left:
+            return "Vai pra Esquerda !!!";
+        case Direction.Right:
+            return "Vai pra Direita !!!";
+        case Direction.Lateral:
+            return "Fagner !!!!";
+        default:
+            return "Ficou parado !!!";
+    }
+}
+console.log(`O comando é: ` + getDirecaoMensagem(Direction.Up));
+console.log(`O comando é:` + getDirecaoMensagem(Direction.Down));
