@@ -1,4 +1,3 @@
-// Interface -- Mapeamento de campos:
 const meuUser = {
     id: 1,
     nome: "Mateus",

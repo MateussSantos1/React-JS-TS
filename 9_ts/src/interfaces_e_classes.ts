@@ -1,5 +1,5 @@
 // Interface -- Mapeamento de campos:
-
+//Usa -se mais interface pra o que vem de um banco de dados: 
 interface Usuario{
     id: number;
     nome: string;

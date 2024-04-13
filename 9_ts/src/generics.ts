@@ -51,3 +51,42 @@ function merge <T extends object, U extends object> (obj1: T, obj2: U){
 
 
     console.log(result)
+
+
+//utilitários de tipos:
+
+
+//Type é parecido com interface, mas se usa mais pra coisas do própio código, não externas !!!
+type Todo = {
+    titulo : string;
+    descricao : string;
+    completado : boolean;
+}
+
+function updateTodo(todo: Todo, campopraAtualizar: Partial<Todo>){
+    return {
+       ...todo,
+       ...campopraAtualizar
+    }
+
+}
+
+const novoTodo : Todo = {
+    titulo: "Estudar",
+    descricao: "Aprender TypeScript",
+    completado: false,
+}
+
+const todoAtualizannndo = updateTodo(novoTodo, {completado: true})
+
+console.log(todoAtualizannndo)
+
+
+
+//Nao quero permitir alterações:
+
+const segundonovoTodo: Readonly<Todo> ={
+    titulo: "sla1",
+    descricao: "sla1desccc",
+    completado:true
+}

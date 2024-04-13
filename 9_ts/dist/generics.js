@@ -22,3 +22,19 @@ function merge(obj1, obj2) {
 //juntando os 2 objetos: 
 const result = merge({ nome: "Mateus", age: 50 }, { job: "Progamador", isActive: true });
 console.log(result);
+function updateTodo(todo, campopraAtualizar) {
+    return Object.assign(Object.assign({}, todo), campopraAtualizar);
+}
+const novoTodo = {
+    titulo: "Estudar",
+    descricao: "Aprender TypeScript",
+    completado: false,
+};
+const todoAtualizannndo = updateTodo(novoTodo, { completado: true });
+console.log(todoAtualizannndo);
+//Nao quero permitir alterações:
+const segundonovoTodo = {
+    titulo: "sla1",
+    descricao: "sla1desccc",
+    completado: true
+};

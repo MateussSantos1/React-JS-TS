@@ -6,7 +6,7 @@ import FotoAmpliada from './components/FotoAmpliada';
 
 function App() {
   const [query, setQuery] = useState("");
-  const [categoria, setCategoria] = useState("");
+  const [categoria, setCategoria] = useState("Natureza");
   const [fotos, setFotos] = useState([]);
   const [fotoAmpliada, setFotoAmpliada] = useState(null);
   const [ativaPesquisa, setAtivaPesquisa] = useState(false);
