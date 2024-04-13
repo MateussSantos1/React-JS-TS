@@ -3,7 +3,6 @@ import {useState} from 'react'
 const TextInput = () => {
     const[text, setText] = useState<string>("")
 
-
     //pra saber se foi enviado !!!
     const[enviadoSucess, setEnviadoSucess] = useState<boolean>(false)
 

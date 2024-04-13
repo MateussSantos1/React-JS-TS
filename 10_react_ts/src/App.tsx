@@ -3,7 +3,7 @@ import './App.css'
 import Greeting from './components/Greeting'
 import Contador from './components/Contador'
 import TextInput from './components/TextInput'
-
+import ContadorIntervalo from './components/ContadorIntervalo'
 
 function App() {
 
@@ -26,6 +26,11 @@ function App() {
         <TextInput/>
 
 
+
+    {/* Custom Hooks com TS: */}
+
+
+        <ContadorIntervalo/>
 
     </>
   )
