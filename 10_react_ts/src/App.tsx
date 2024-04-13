@@ -4,6 +4,8 @@ import Greeting from './components/Greeting'
 import Contador from './components/Contador'
 import TextInput from './components/TextInput'
 import ContadorIntervalo from './components/ContadorIntervalo'
+import FormularioLogin from './components/FormularioLogin'
+import ListaCompras from './components/ListaCompras'
 
 function App() {
 
@@ -32,6 +34,15 @@ function App() {
 
         <ContadorIntervalo/>
 
+
+    {/* Exercicio 1 : Forms Login  */}
+
+    <FormularioLogin/>
+
+
+    {/* Exercicio 2 : Lista de Compras */}
+
+    <ListaCompras/>
     </>
   )
 }
