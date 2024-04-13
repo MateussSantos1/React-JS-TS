@@ -6,7 +6,7 @@ import TextInput from './components/TextInput'
 import ContadorIntervalo from './components/ContadorIntervalo'
 import FormularioLogin from './components/FormularioLogin'
 import ListaCompras from './components/ListaCompras'
-
+import UsoLocalStorage from './components/UsoLocalStorage'
 function App() {
 
 
@@ -43,6 +43,10 @@ function App() {
     {/* Exercicio 2 : Lista de Compras */}
 
     <ListaCompras/>
+
+
+    {/* Exercicio 3 : UseLocalStorage:  */}
+    <UsoLocalStorage/>
     </>
   )
 }

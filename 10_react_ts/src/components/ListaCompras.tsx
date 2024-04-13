@@ -25,6 +25,7 @@ const ListaCompras = () => {
         // Verifica se o nome do produto está preenchido
         if (!produto) {
             alert("Por favor, insira um nome válido!!!");
+            setProduto("");
             return;
         }
 
@@ -32,6 +33,7 @@ const ListaCompras = () => {
         const quantidadeInt = parseInt(quantidade);
         if (isNaN(quantidadeInt)) {
             alert("Por favor, insira uma quantidade válida!!!");
+            setQuantidade("");
             return;
         }
 
