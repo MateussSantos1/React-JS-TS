@@ -1,5 +1,11 @@
 ## Algumas notas sobre o uso do REACT com JS e TS
 
+### Deploys ( REACT - TS ):
+
+* [Deploy - Calculadora de Churrasco](https://churras-versao-final.vercel.app/)
+
+
+
 ### Deploys ( REACT - JS ):
 
 * [Deploy - Mini Ecommerce](https://asa-kappa.vercel.app)
