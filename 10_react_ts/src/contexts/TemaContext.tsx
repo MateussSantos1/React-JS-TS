@@ -1,3 +1,18 @@
+// // o contexto é utilizado para compartilhar o estado do tema e a função 
+// para alterná-lo entre os componentes da aplicação, sem a necessidade de
+//  passar esses dados manualmente através das props. Isso torna o código
+//   mais limpo e eficiente.
+
+
+
+
+
+
+
+
+
+
+
 import { createContext, useState, ReactNode } from "react";
 
 

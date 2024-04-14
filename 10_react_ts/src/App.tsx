@@ -10,6 +10,7 @@ import UsoLocalStorage from './components/UsoLocalStorage'
 import ContadorURED from './components/ContadorURED'
 import { TemaProvider } from './contexts/TemaContext'
 import BarraFerramentas from './components/BarraFerramentas'
+import ExibirPostagens from './components/ExibirPostagens'
 function App() {
 
 
@@ -56,10 +57,15 @@ function App() {
     <ContadorURED/>
 
     {/* 7 - Context API com TS: */}
+    {/* useContext passa dadods de um componente pra outro !!! */}
     <TemaProvider>
 
       <BarraFerramentas/>
     </TemaProvider>
+
+
+    {/* 8 - Requisição de API com AXIOS e TS: */}
+    <ExibirPostagens/>
     </>
   )
 }
