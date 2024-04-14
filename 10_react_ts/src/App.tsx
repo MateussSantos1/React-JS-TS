@@ -8,6 +8,8 @@ import FormularioLogin from './components/FormularioLogin'
 import ListaCompras from './components/ListaCompras'
 import UsoLocalStorage from './components/UsoLocalStorage'
 import ContadorURED from './components/ContadorURED'
+import { TemaProvider } from './contexts/TemaContext'
+import BarraFerramentas from './components/BarraFerramentas'
 function App() {
 
 
@@ -52,6 +54,12 @@ function App() {
     {/* 6 - useReducer com TS:  */}
 
     <ContadorURED/>
+
+    {/* 7 - Context API com TS: */}
+    <TemaProvider>
+
+      <BarraFerramentas/>
+    </TemaProvider>
     </>
   )
 }
