@@ -14,6 +14,7 @@ import { Formik, Field, Form } from 'formik'
 
 import * as Yup from 'yup'
 
+import styles from "./CalculadoraChurrasco.module.css"
 
 
 const esquemaValidacao = Yup.object().shape({
@@ -35,7 +36,7 @@ const CalculadoraChurrasco = () => {
   const navigate = useNavigate()
 
   return (
-    <div>
+    <div className={styles.container}>
 
     <Formik 
 
@@ -56,10 +57,10 @@ const CalculadoraChurrasco = () => {
 
     <Form>
 
-    <div>
-      <label htmlFor="pessoas">Números de Pessoas: </label>
+    <div className={styles.inputGroup}>
+      <label htmlFor="pessoas" className={styles.inputLabel}>Números de Pessoas: </label>
       <Field name="pessoas" type="number"/>
-      {errors.pessoas && touched.pessoas ? (<p>{errors.pessoas}</p>) : null}
+      {errors.pessoas && touched.pessoas ? (<p className={styles.error}>{errors.pessoas}</p>) : null}
 
     </div>
     <h2>Selecione os Alimentos Para o Churrasco: </h2>
@@ -73,8 +74,8 @@ const CalculadoraChurrasco = () => {
         </div>
       ))
     }
-        {errors.selecaoAlimentos && touched.selecaoAlimentos ? (<p>{errors.selecaoAlimentos}</p>) : null}
-        <button type="submit">Calcular</button>
+        {errors.selecaoAlimentos && touched.selecaoAlimentos ? (<p className={styles.error}>{errors.selecaoAlimentos}</p>) : null}
+        <button type="submit" className={styles.calculateButton}>Calcular</button>
 
     </Form>
 
