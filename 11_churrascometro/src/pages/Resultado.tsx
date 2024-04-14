@@ -1,4 +1,4 @@
-import React from 'react'
+
 import ResultChurrasco from '../components/ResultChurrasco'
 import bgImagem from '../assets/bg-2.jpg'
 const Resultado = () => {
