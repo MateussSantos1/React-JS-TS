@@ -7,6 +7,7 @@ import ContadorIntervalo from './components/ContadorIntervalo'
 import FormularioLogin from './components/FormularioLogin'
 import ListaCompras from './components/ListaCompras'
 import UsoLocalStorage from './components/UsoLocalStorage'
+import ContadorURED from './components/ContadorURED'
 function App() {
 
 
@@ -29,24 +30,28 @@ function App() {
 
 
 
-    {/* Custom Hooks com TS: */}
+    {/* 4 - Custom Hooks com TS: */}
 
 
         <ContadorIntervalo/>
 
 
-    {/* Exercicio 1 : Forms Login  */}
+    {/* 5 - Exercicio 1 : Forms Login  */}
 
     <FormularioLogin/>
 
 
-    {/* Exercicio 2 : Lista de Compras */}
+    {/* 5 - Exercicio 2 : Lista de Compras */}
 
     <ListaCompras/>
 
 
-    {/* Exercicio 3 : UseLocalStorage:  */}
+    {/* 5 -  Exercicio 3 : UseLocalStorage:  */}
     <UsoLocalStorage/>
+
+    {/* 6 - useReducer com TS:  */}
+
+    <ContadorURED/>
     </>
   )
 }

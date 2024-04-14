@@ -1,0 +1,1 @@
+export type ContadorAcao = { type: "increment"} | {type: "decrement"} | {type: "double"} | {type: "resetar"};
