@@ -7,7 +7,7 @@
 
 import {useNavigate} from 'react-router-dom'
 
-import { Alimento, nomeAlimentos } from '../types/Alimento'
+import { nomeAlimentos } from '../types/Alimento'
 
 
 import { Formik, Field, Form } from 'formik'
