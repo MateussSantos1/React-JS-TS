@@ -52,3 +52,41 @@ const FormularioLogin = () => {
 export default FormularioLogin
 
 
+// // Codigo otimizado: 
+
+
+// import { useState } from "react";
+
+// const FormularioLogin = () => {
+//     const [dadosFormulario, setDadosFormulario] = useState({ usuario: "", senha: "" });
+//     const [enviado, setEnviadoSucesso] = useState(false);
+
+//     const lidarComMudancas = (event: React.ChangeEvent<HTMLInputElement>) => {
+//         const { name, value } = event.target;
+//         setDadosFormulario(prevState => ({
+//             ...prevState,
+//             [name]: value
+//         }));
+//         setEnviadoSucesso(false);
+//     };
+
+//     const LidarSubmit = (event: React.FormEvent) => {
+//         event.preventDefault();
+//         setEnviadoSucesso(true);
+//     };
+
+//     return (
+//         <div>
+//             <h3>Login do Usuario:</h3>
+//             <form onSubmit={LidarSubmit}>
+//                 <input type="text" name="usuario" value={dadosFormulario.usuario} onChange={lidarComMudancas} />
+//                 <input type="text" name="senha" value={dadosFormulario.senha} onChange={lidarComMudancas} />
+//                 <button type="submit">Entrar</button>
+//                 {enviado && <p>Sucesso! User: {dadosFormulario.usuario} e Senha: {dadosFormulario.senha}</p>}
+//             </form>
+//         </div>
+//     );
+// };
+
+// export default FormularioLogin;
+
