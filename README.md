@@ -3,6 +3,7 @@
 ### Deploys ( REACT - TS ):
 
 * [Deploy - Calculadora de Churrasco](https://churras-versao-final.vercel.app/)
+*  [Deploy - Formulário Simples](https://form-react-hook-form-com-ts.vercel.app/)
 
 
 
