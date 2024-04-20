@@ -4,7 +4,7 @@ import { useAuthState } from 'react-firebase-hooks/auth'
 import {auth} from "./services/firebaseConfig"
 import { addDoc, collection, limit, orderBy, query, serverTimestamp } from 'firebase/firestore'
 import {useCollectionData} from 'react-firebase-hooks/firestore'
-import { useState } from 'react'
+import { useRef, useState } from 'react'
 import { app, databaseApp } from './services/firebaseConfig'
 export const App = () => {
   const[user] = useAuthState(auth)
@@ -26,6 +26,8 @@ export const App = () => {
 
 // Salas de conversa:
 export const ChatRoom = () => {
+
+const rolagem = useRef()
 
   //Referencia da tabela message
   const messageRef = collection(databaseApp, 'messages')
@@ -52,6 +54,8 @@ export const ChatRoom = () => {
     })
     setFormValue("")
 
+    //scroll do chat: 
+    rolagem.current.scrollIntoView({behavior: 'smoot'})
   }
 
 
@@ -60,6 +64,7 @@ export const ChatRoom = () => {
       <main>
         {messages && messages.map((msg, index) =>
         (<ChatMessage key={index} message = {msg}/>))}
+        <div ref={rolagem}></div>
       </main>
 
           <form onSubmit={sendMessage}>
