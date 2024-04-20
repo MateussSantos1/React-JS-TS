@@ -26,5 +26,9 @@ npm i vite
 --Em cada pasta
 
 
+npm run dev
+
+--rodar aplicacao
+
 
 
