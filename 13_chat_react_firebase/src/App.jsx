@@ -34,7 +34,7 @@ const rolagem = useRef()
 
 
   //ordenando as mensagens pela ordem de envio/criacao
-  const QueryMessages = query(messageRef, orderBy("createdAt"), limit(50))
+  const QueryMessages = query(messageRef, orderBy("createdAt"), limit(300))
 
   const [messages] = useCollectionData(QueryMessages, { idField: 'id' });
 
