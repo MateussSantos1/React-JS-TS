@@ -1,11 +1,10 @@
 
 import { useContext } from "react"
 import { UsuarioContext } from "../../contexts/usuario"
-import { useNavigate } from "react-router-dom"
+import { Link, NavLink, Outlet } from "react-router-dom"
 
 
 const Alunos = () => {
-    const navigate = useNavigate ()
   return (
     <div>
         <div>
@@ -18,7 +17,13 @@ const Alunos = () => {
             <li>Exemplo 1</li>
             <li>Exemplo 1</li>
         </ul>
-        <button onClick={() => navigate("cadastro")}>Cadastrar Aluno</button>
+        <button type="submit" >Cadastrar Aluno</button>
+
+
+
+        <div>
+        <Outlet/>
+        </div>
     </div>
   )
 }
