@@ -1,7 +1,7 @@
 
 import { useContext } from "react"
 import { UsuarioContext } from "../../contexts/usuario"
-import { Link, NavLink, Outlet } from "react-router-dom"
+import { Link, NavLink} from "react-router-dom"
 
 
 const Alunos = () => {
@@ -22,7 +22,6 @@ const Alunos = () => {
 
 
         <div>
-        <Outlet/>
         </div>
     </div>
   )
