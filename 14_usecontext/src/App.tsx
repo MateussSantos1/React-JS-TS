@@ -28,12 +28,8 @@ return(
 
           {/* Rota principal */}
 
-          <Route path="/" element={<Alunos />}>
-
-            {/* Rota para a página de Cadastro de Aluno, aninhada dentro da rota principal */}
-
-            <Route path="cadastro" element={<CadastroAluno />}></Route>
-            </Route>
+          <Route path="/" element={<Alunos />}></Route>
+          <Route path="/cadastro" element={<CadastroAluno />}></Route>
         </Routes>
   
   
