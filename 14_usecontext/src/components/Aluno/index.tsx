@@ -1,23 +1,26 @@
-import { Nome } from "../Nome"
+
 import { useContext } from "react"
 import { UsuarioContext } from "../../contexts/usuario"
+import { useNavigate } from "react-router-dom"
 
 
-export function Alunos(){
-    const {qtdAluno, mudaNome} = useContext(UsuarioContext);
-
-    return(
+const Alunos = () => {
+    const navigate = useNavigate ()
+  return (
+    <div>
         <div>
-            <h3>
-                Quantidade de alunos: {qtdAluno}
-            </h3>
-            <button onClick={() => mudaNome("Mateus")}>Mudar Nome</button>
-            <br />
-            <hr />
-            <Nome />
+            <h1>LOGO</h1>
         </div>
-    )
-
+        <h4>Quantidade de Alunos: {0}</h4>
+        <h4>Relação de Aunos:</h4>
+        <ul>
+            <li>Exemplo 1</li>
+            <li>Exemplo 1</li>
+            <li>Exemplo 1</li>
+        </ul>
+        <button onClick={() => navigate("cadastro")}>Cadastrar Aluno</button>
+    </div>
+  )
 }
 
 export default Alunos

@@ -1,7 +1,7 @@
 import './App.css'
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import { BrowserRouter, Routes, Route} from 'react-router-dom'
 import  Alunos  from './components/Aluno/index'
-import  Nome  from './components/Nome/index'
+import CadastroAluno from './components/CadastroAluno'
 import UserProvider from './contexts/usuario'
 function App() {
 
@@ -26,9 +26,15 @@ return(
   
   <Routes>
 
-  <Route path = "/" element={<Alunos/>}></Route>
-  <Route path = "/cadastro" element={<Nome/>}></Route>
-  </Routes>
+          {/* Rota principal */}
+
+          <Route path="/" element={<Alunos />}>
+
+            {/* Rota para a página de Cadastro de Aluno, aninhada dentro da rota principal */}
+
+            <Route path="cadastro" element={<CadastroAluno />}></Route>
+            </Route>
+        </Routes>
   
   
   
